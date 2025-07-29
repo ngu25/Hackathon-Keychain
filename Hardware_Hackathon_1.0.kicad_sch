@@ -1389,7 +1389,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:BC547"
+		(symbol "Transistor_BJT:BC817"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1406,7 +1406,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC547"
+			(property "Value" "BC817"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -1415,7 +1415,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -1426,7 +1426,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC818-D.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1436,7 +1436,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+			(property "Description" "0.8A Ic, 45V Vce, NPN Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1454,7 +1454,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1463,10 +1463,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC547_0_1"
+			(symbol "BC817_0_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 0.635 0)
+						(xy -2.54 0) (xy 0.635 0)
 					)
 					(stroke
 						(width 0)
@@ -1478,34 +1478,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+						(xy 0.635 1.905) (xy 0.635 -1.905)
 					)
 					(stroke
 						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -1523,9 +1499,35 @@
 						(type none)
 					)
 				)
+			)
+			(symbol "BC817_1_1"
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
 					)
 					(stroke
 						(width 0)
@@ -1535,11 +1537,9 @@
 						(type outline)
 					)
 				)
-			)
-			(symbol "BC547_1_1"
 				(pin input line
 					(at -5.08 0 0)
-					(length 5.08)
+					(length 2.54)
 					(name "B"
 						(effects
 							(font
@@ -1547,7 +1547,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1565,7 +1565,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1583,7 +1583,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1807,6 +1807,17 @@
 		)
 		(uuid "3baddaa0-d914-4d03-8398-201d77e75334")
 	)
+	(text "Revision (Date: 29/07/2025):\n\nFixed the BC817 Symbol and Footprint to\nPIN1 - BASE\nPIN2 - EMITTER\nPIN3 - COLLECTOR"
+		(exclude_from_sim no)
+		(at 176.53 157.734 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "748dff4e-2fc9-4915-941b-d1c4b9952076")
+	)
 	(junction
 		(at 178.816 91.44)
 		(diameter 0)
@@ -1818,12 +1829,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17eda982-0e34-4e1d-91d9-e1201ecbae3c")
-	)
-	(junction
-		(at 175.26 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3e4239cb-0b34-42aa-b41e-1b3664fb736f")
 	)
 	(junction
 		(at 151.13 72.39)
@@ -1848,6 +1853,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5fa1dbb5-cc62-4a00-adab-2ad9610777d6")
+	)
+	(junction
+		(at 175.26 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7cc3fa30-9278-4ba5-ac1e-5fb56a4dd012")
 	)
 	(junction
 		(at 135.89 72.39)
@@ -2085,6 +2096,16 @@
 	)
 	(wire
 		(pts
+			(xy 175.26 91.44) (xy 178.816 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7284e02d-6e8e-499e-9d1d-9d2d84bb55f3")
+	)
+	(wire
+		(pts
 			(xy 178.816 82.55) (xy 178.816 91.44)
 		)
 		(stroke
@@ -2295,16 +2316,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 91.44) (xy 178.816 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7a0c581-01a0-4e64-8e81-4efc2d576d8f")
-	)
-	(wire
-		(pts
 			(xy 135.89 88.9) (xy 135.89 91.44)
 		)
 		(stroke
@@ -2332,6 +2343,82 @@
 			(justify left bottom)
 		)
 		(uuid "de364bec-c736-485f-8edd-04a5392d35e2")
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC817")
+		(at 172.72 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c5b5227-138e-4b65-a712-1c58c355a11f")
+		(property "Reference" "Q1"
+			(at 177.8 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817"
+			(at 177.8 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 177.8 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC818-D.pdf"
+			(at 172.72 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, NPN Transistor, SOT-23"
+			(at 172.72 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ddc5f723-10ac-4a89-8bb3-c803826eebbf")
+		)
+		(pin "3"
+			(uuid "9396d7d6-713b-40d3-ad1a-4caa9f34f5bb")
+		)
+		(pin "2"
+			(uuid "942a4a0f-db4f-42dd-a8b9-d323b0fa24d2")
+		)
+		(instances
+			(project ""
+				(path "/1e18e8ab-8efb-4c4e-8c67-d8bddaa41069"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -2419,7 +2506,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "47K"
 			(at 138.43 83.8199 0)
 			(effects
 				(font
@@ -3000,118 +3087,6 @@
 			(project ""
 				(path "/1e18e8ab-8efb-4c4e-8c67-d8bddaa41069"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC547")
-		(at 172.72 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6a09c2c9-72f2-4fbd-9e0a-cd1cb3c8e3e8")
-		(property "Reference" "Q1"
-			(at 177.8 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC817"
-			(at 177.8 97.7899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
-			(at 177.8 98.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" ""
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" ""
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" ""
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" ""
-			(at 172.72 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "054593ff-e867-4f4a-bee6-f05f69d7251a")
-		)
-		(pin "3"
-			(uuid "16406fd1-05d4-4e72-b32a-90016882921a")
-		)
-		(pin "1"
-			(uuid "4606fec1-e843-4780-b519-b6a8753ae10f")
-		)
-		(instances
-			(project "Hardware_Hackathon_1.0"
-				(path "/1e18e8ab-8efb-4c4e-8c67-d8bddaa41069"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
